@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col s10 offset-s2" style="overflow-y: scroll; margin-top:65px; position:relative;">
+    <h1>Edit storage</h1>
+    <form class="col s8 offset-s2 light-blue lighten-4 z-depth-5" style="padding: 5%; margin: 3%">
+      <div class="input-field" >
+        <input id="product_name" type="text" class="validate" required
+               [(ngModel)]="storage.name" name="name">
+        <label class="active" for="product_name">Storage name</label>
+      </div>
+      <div class="input-field" >
+        <input  id="product_height" type="text" class="validate" required
+                [(ngModel)]="storage.sate" name="height">
+        <label class="active" for="product_height">Storage state</label>
+      </div>
+      <div class="input-field" >
+        <input  id="product_length" type="text" class="validate" required
+                [(ngModel)]="storage.city" name="length">
+        <label class="active" for="product_length">Storage city</label>
+      </div>
+      <div class="input-field" >
+        <input id="product_width" type="text" class="validate" required
+               [(ngModel)]="storage.street" name="width">
+        <label class="active" for="product_width">Storage street</label>
+      </div>
+      <a class="waves-effect waves-light btn light-blue darken-1" (click)="editStorage()" >Edit storage</a>
+    </form>
+  </div>
+</div>

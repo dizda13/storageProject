@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col s10 offset-s2" style="overflow-y: scroll; margin-top:65px; position:relative;">
+    <h1>Edit product</h1>
+    <form class="col s8 offset-s2 light-blue lighten-4 z-depth-5" style="padding: 5%; margin: 3%">
+      <div class="input-field" >
+        <input id="product_name" type="text" class="validate" required
+               [(ngModel)]="newProduct.name" name="name">
+        <label class="active" for="product_name">Product name</label>
+      </div>
+      <div class="input-field" >
+        <input id="product_height" type="number" class="validate" required
+                [(ngModel)]="newProduct.height" name="height">
+        <label class="active" for="product_height">Product height</label>
+      </div>
+      <div class="input-field" >
+        <input  id="product_length" type="number" class="validate" required
+                [(ngModel)]="newProduct.length" name="length">
+        <label class="active" for="product_length">Product length</label>
+      </div>
+      <div class="input-field" >
+        <input id="product_width" type="number" class="validate" required
+               [(ngModel)]="newProduct.width" name="width">
+        <label class="active" for="product_width">Product width</label>
+      </div>
+      <div class="input-field" >
+        <input  id="product_price" type="number" class="validate" required
+                [(ngModel)]="newProduct.price" name="price">
+        <label class="active" for="product_price" >Product price</label>
+      </div>
+      <div class="input-field" >
+        <input id="product_weight" type="number" class="validate" required
+               [(ngModel)]="newProduct.weight" name="width">
+        <label class="active" for="product_weight">Product weight</label>
+      </div>
+      <a class="waves-effect waves-light btn light-blue darken-1" (click)="addProduct()" >Edit product</a>
+    </form>
+  </div>
+</div>

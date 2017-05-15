@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col s10 offset-s2" style="overflow-y: scroll; margin-top:65px; position:relative;">
+    <h1>List of storages
+      <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-4 fixed right" (click)="addStorage()" ><i class="material-icons">add</i></a>
+    </h1>
+    <div class="input-field col s4" style="margin-right: 100%">
+      <i class="material-icons prefix">search</i>
+      <input id="icon_prefix" type="text" class="validate" [(ngModel)]="this.search">
+      <label for="icon_prefix">Search</label>
+    </div>
+
+    <div *ngFor="let storage of storages">
+      <div class="card col s3" [hidden]="isSub(storage.name | lowercase)" style="margin: 4%; top: 3%;">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="http://www.sentryselfstorage.co.uk/images/indoor-corridor.gif">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">{{ storage.name }}<i class="material-icons right">more_vert</i></span>
+          <p>{{ storage.sate }}</p>
+          <p>{{ storage.city }}, {{ storage.street }}</p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{ storage.name }}<i class="material-icons right">close</i></span>
+          <a class="waves-effect waves-light btn light-blue lighten-5 black-text" style="margin: 3%;" (click)="addProductRedirect(storage.id)" >Add product</a><br>
+          <a class="waves-effect waves-light btn light-blue lighten-5 black-text" style="margin: 3%;" (click)="listProductRedirect(storage.id)" >List of products</a><br>
+          <a class="waves-effect waves-light btn light-blue lighten-5 black-text" style="margin: 3%;" (click)="editStorage(storage.id)">Edit storage</a>
+          <a class="waves-effect waves-light btn light-blue lighten-5 black-text" style="margin: 3%;" (click)="deleteStorage(storage.id)">Delete storage</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

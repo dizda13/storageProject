@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col s10 offset-s2" style="overflow-y: scroll; margin-top:65px; position:relative;">
+    <h1>List of product from storage
+      <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-4 fixed right" (click)="addProduct()"><i class="material-icons">add</i></a>
+    </h1>
+    <div class="input-field col s4" style="margin-right: 100%">
+      <i class="material-icons prefix">search</i>
+      <input id="icon_prefix" type="text" class="validate" [(ngModel)]="this.search">
+      <label for="icon_prefix">Search</label>
+    </div>
+    <ul   class="collection">
+      <div  *ngFor="let product of products">
+      <li class="collection-item avatar hoverable" [hidden]="isSub(product.name | lowercase)" style="margin: 1%">
+        <img src="http://www.sentryselfstorage.co.uk/images/indoor-corridor.gif" alt="" class="circle">
+        <a (click)="deleteProductFromStorage(product.id)"><i class="material-icons right" >close</i></a>
+        <span class="title">Name: {{product.name}}</span>
+        <p>Price: {{ product.price | currency:'USD':true }} <br>
+          Created date: {{product.createdAtTime | date: 'dd/MM/yyyy'}}<br>
+          Quantity: {{product.quantity}}
+        </p>
+      </li>
+      </div>
+    </ul>
+  </div></div>
+

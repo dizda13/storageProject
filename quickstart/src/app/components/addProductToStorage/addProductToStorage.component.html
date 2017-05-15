@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col s10 offset-s2" style="overflow-y: scroll; margin-top:65px; position:relative;">
+    <h1>Add new product</h1>
+    <form class="col s8 offset-s2 light-blue lighten-4 z-depth-5" style="padding: 5%; margin: 3%">
+      <div class="input-field" >
+        <input id="product_name" type="text" class="validate" required
+               [(ngModel)]="newProduct.name" name="name">
+        <label for="product_name">Product name</label>
+      </div>
+      <div class="input-field" >
+        <input  id="product_height" type="number" class="validate" required
+                [(ngModel)]="newProduct.height" name="height">
+        <label for="product_height">Product height</label>
+      </div>
+      <div class="input-field" >
+        <input  id="product_length" type="number" class="validate" required
+                [(ngModel)]="newProduct.length" name="length">
+        <label for="product_length">Product length</label>
+      </div>
+      <div class="input-field" >
+        <input id="product_width" type="number" class="validate" required
+               [(ngModel)]="newProduct.width" name="width">
+        <label for="product_width">Product width</label>
+      </div>
+      <div class="input-field" >
+        <input  id="product_price" type="number" class="validate" required
+                [(ngModel)]="newProduct.price" name="price">
+        <label for="product_price" >Product price</label>
+      </div>
+      <div class="input-field" >
+        <input id="product_weight" type="number" class="validate" required
+               [(ngModel)]="newProduct.weight" name="width">
+        <label for="product_weight">Product weight</label>
+      </div>
+      <div class="input-field" >
+        <input id="product_quantity" type="number" class="validate" required
+               [(ngModel)]="newProduct.quantity" name="width">
+        <label for="product_weight">Product quantity</label>
+      </div>
+      <a class="waves-effect waves-light btn light-blue darken-1" (click)="addProductToStorage()" >Add product</a>
+    </form>
+  </div>
+</div>
